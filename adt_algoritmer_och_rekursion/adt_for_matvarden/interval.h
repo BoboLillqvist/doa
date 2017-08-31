@@ -41,7 +41,7 @@ public:
 
 	}
 
-	string print()
+	std::string print()
 	{
 
 	}
