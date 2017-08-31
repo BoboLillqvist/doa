@@ -15,9 +15,9 @@ int main()
 
     cout << "u1: " << u1 << endl;
     cout << "u2: " << u2 << endl;
-    cout << u1 + u2 << endl;
-    cout << u1 - u2 << endl;
-    cout << u1 * u2 << endl;
+    cout << "u1 + u2: " << u1 + u2 << endl;
+    cout << "u1 - u2: " << u1 - u2 << endl;
+    cout << "u1 * u2: " << u1 * u2 << endl;
 
     system("pause");
 	return 0;
