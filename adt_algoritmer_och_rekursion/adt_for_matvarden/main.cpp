@@ -10,8 +10,15 @@ using namespace std;
 
 int main()
 {
-	interval<int> u1(5, 20);
-	interval<int> u2(5, 2);
+	interval<int> u1(-10, 4);
+	interval<int> u2(8, 2);
 
+    cout << "u1: " << u1 << endl;
+    cout << "u2: " << u2 << endl;
+    cout << u1 + u2 << endl;
+    cout << u1 - u2 << endl;
+    cout << u1 * u2 << endl;
+
+    system("pause");
 	return 0;
 }
