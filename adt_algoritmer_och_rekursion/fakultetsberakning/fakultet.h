@@ -8,4 +8,11 @@ long rekursivFakultet(long n)
 	else
 		return n*rekursivFakultet(n - 1);
 }
+
+long iterativFakultet(long n)
+{
+	long product = 1;
+	for (long i = 1; i <= n; i++)
+		product *= i;
+	return product;
 }
