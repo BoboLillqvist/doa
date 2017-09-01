@@ -1,7 +1,11 @@
 #pragma once
 #include <iostream>
 #include <time.h>
-long fakultet(long n)
+long rekursivFakultet(long n)
 {
-	return 0;
+	if (n == 0)
+		return 1;
+	else
+		return n*rekursivFakultet(n - 1);
+}
 }
