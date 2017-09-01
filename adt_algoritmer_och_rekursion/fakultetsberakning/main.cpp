@@ -5,23 +5,33 @@
 // https://github.com/BoboLillqvist/doa
 //
 #include <iostream>
+#include <chrono>
+#include "Watch.h"
 #include "fakultet.h"
+#include <iomanip> 
 using namespace std;
-
+using namespace Course;
 int main()
 {
-	long x = 5;
-	long y = 7;
-	long z = 11;
-	cout << "X är:" << x << endl;
-	cout << "Y är:" << y << endl;
-	cout << "Z är:" << z << endl;
-	x=fakultet(x);
-	y = fakultet(y);
-	z = fakultet(z);
-	cout << "Fakulteten av X är:" << x << endl;
-	cout << "Fakulteten av Y är:" << y << endl;
-	cout << "Fakulteten av Z är:" << z << endl;
+	Course::Watch w;
+	w.restart();
+	Course::nanoseconds t0,t1;
+	cout << "Rekursiv fakultet:\n" << endl;
+	for (long i = 1; i < 10; i++)
+	{
+		long n = i;
+		cout << n << "s fakultet är: " << rekursivFakultet(n) << endl;
+	}
+	t0 = w.elapsedNs();
+	w.restart();
+	cout << "Iterativ fakultet:\n" << endl;
+	for (long i = 1; i < 10; i++)
+	{
+		long n = i;
+		cout << n << "s fakultet är: " << iterativFakultet(n) << endl;
+	}
+	t1 = w.elapsedNs();
+	cout <<"\nTid för rekursiv fakultet: "<< t0.count() << " ns\nTid för iterativ fakultet: " <<t1.count()<<" ns"<< endl;
 	system("pause");
 	return 0;
 }
