@@ -34,13 +34,14 @@ int main(void)
 // Print a triangle of chars recursively
 void triangle(ostream& os, size_t m, size_t n)
 {
+    // Termination
     if ((m - 1) == n)
         return;
 
     // Print m stars
     os << lineOfNChars('*', m);
 
-        // Recursive part
+    // Recursive part
     if (m <= n)
     {
         triangle(os, (m + 1), n);
