@@ -25,30 +25,31 @@ private:
     Node<T>* head;
 
 public:
-	//Constructors
+	// Constructors
     ForwardList()
     {
 
     }
-	//Destructor
+
+	// Destructor
 	~ForwardList()
 	{
 
 	}
 
-	//Capacity
+	// Capacity
 	bool empty() 
 	{ 
 		return true; 
 	}
 
-	//Elementaccess
+	// Elementaccess
 	T& front()
 	{
 
 	}
 
-	//Modifiers
+	// Modifiers
 	void pushFront(const T& value)
 	{
 
@@ -80,7 +81,8 @@ public:
 		//Ändra den listan som kallar på funktionen med den listan som skickas in
 		//Kolla så att båda har samma <T>
 	}
-	//Iterator
+
+	// Iterator
 	class Iterator
 	{
 	public:
@@ -97,10 +99,12 @@ public:
 	private:
 		
 	};
+
 	Iterator begin()
 	{
 
 	}
+
 	Iterator end()
 	{
 

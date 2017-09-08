@@ -12,23 +12,22 @@ namespace TestForwardList
 
 		TEST_METHOD(TestEmpty)
 		{
-			ForwardList<int> fli;
-			Assert::AreEqual(true, fli.empty());
+
 		}
 
 		TEST_METHOD(TestPushFront)
 		{
-			ForwardList<int> fli;
+
 		}
 
 		TEST_METHOD(TestPopFront)
 		{
-			ForwardList<int> fli;
+
 		}
 
 		TEST_METHOD(TestIteratorBeginEnd)
 		{
-			ForwardList<int> fli;
+
 		}
 	};
 
