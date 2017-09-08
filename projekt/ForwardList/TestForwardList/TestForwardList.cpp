@@ -12,7 +12,8 @@ namespace TestForwardList
 
 		TEST_METHOD(TestEmpty)
 		{
-
+			ForwardList<int> fl;
+			Assert::AreEqual(true, fl.empty());
 		}
 
 		TEST_METHOD(TestPushFront)

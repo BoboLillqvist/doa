@@ -23,12 +23,12 @@ class ForwardList
 {
 private:
     Node<T>* head;
-		head = nullptr;
+
 public:
 	// Constructors
     ForwardList()
     {
-
+		head = nullptr;
     }
 
 	// Destructor
@@ -40,7 +40,7 @@ public:
 	// Capacity
 	bool empty() 
 	{ 
-		return true; 
+		return (head == nullptr);
 	}
 
 	// Elementaccess
@@ -64,8 +64,8 @@ public:
 
 	void popFront()
 	{
-		//Ta bort fï¿½rsta noden
-		//ï¿½ndra headern till den fï¿½rsta nodens next.
+		//Ta bort första noden
+		//Ändra headern till den första nodens next.
 	}
  
 	void clear()
