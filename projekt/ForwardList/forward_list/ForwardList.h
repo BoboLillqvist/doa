@@ -23,7 +23,7 @@ class ForwardList
 {
 private:
     Node<T>* head;
-
+		head = nullptr;
 public:
 	// Constructors
     ForwardList()
@@ -52,12 +52,20 @@ public:
 	// Modifiers
 	void pushFront(const T& value)
 	{
+		//Create new node
+		Node<T> *node = new Node<T>(value);
 
+		//Set new nodes next to the current head
+		node = head;
+
+		//Point head to the new node
+		head = node;
 	}
 
 	void popFront()
 	{
-
+		//Ta bort f�rsta noden
+		//�ndra headern till den f�rsta nodens next.
 	}
  
 	void clear()

@@ -17,7 +17,13 @@ namespace TestForwardList
 
 		TEST_METHOD(TestPushFront)
 		{
-
+			ForwardList<int> fl;
+			ForwardList<int> f2;
+			int x = 5;
+			fl.pushFront(x);
+			fl.pushFront(x);
+			Assert::AreEqual(false, fl.empty());
+			Assert::AreEqual(false, f2.empty());
 		}
 
 		TEST_METHOD(TestPopFront)
