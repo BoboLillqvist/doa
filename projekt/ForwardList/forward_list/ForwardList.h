@@ -1,7 +1,29 @@
 #pragma once
+
+template <class T>
+struct Node
+{
+    T value;
+    Node<T>* next;
+
+    Node()
+    {
+        next = nullptr;
+    }
+
+    Node(const T& tValue)
+    {
+        next = nullptr;
+        value = tValue;
+    }
+};
+
 template <class T>
 class ForwardList
 {
+private:
+    Node<T>* head;
+
 public:
 	//Constructors
     ForwardList()
