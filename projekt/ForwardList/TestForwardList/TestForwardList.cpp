@@ -20,9 +20,13 @@ namespace TestForwardList
 		{
 			ForwardList<int> fl;
 			ForwardList<int> f2;
-			int x = 5;
+
+			int x = 5, y = 10;
+
 			fl.pushFront(x);
-			fl.pushFront(x);
+			fl.pushFront(y);
+			f2.pushFront(x);
+
 			Assert::AreEqual(false, fl.empty());
 			Assert::AreEqual(false, f2.empty());
 		}

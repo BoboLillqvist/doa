@@ -53,10 +53,10 @@ public:
 	void pushFront(const T& value)
 	{
 		//Create new node
-		Node<T> *node = new Node<T>(value);
+		Node<T>* node = new Node<T>(value);
 
 		//Set new nodes next to the current head
-		node = head;
+		node->next = head;
 
 		//Point head to the new node
 		head = node;
