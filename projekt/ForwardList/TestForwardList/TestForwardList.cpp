@@ -33,7 +33,17 @@ namespace TestForwardList
 
 		TEST_METHOD(TestPopFront)
 		{
+            ForwardList<int> list1;
+            int x = 5, y = 7, z = 14;
+            list1.pushFront(x);
+            list1.pushFront(y);
+            list1.pushFront(z);
 
+            // list: 5, 7, 14
+            list1.popFront();
+
+            // After pop, the list should be: 7, 14
+            Assert::AreEqual(list1.front(), 7);
 		}
 
 		TEST_METHOD(TestIteratorBeginEnd)

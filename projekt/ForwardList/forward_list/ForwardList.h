@@ -46,7 +46,7 @@ public:
 	// Elementaccess
 	T& front()
 	{
-
+        return head->value;
 	}
 
 	// Modifiers
