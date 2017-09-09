@@ -52,20 +52,20 @@ public:
 	// Modifiers
 	void pushFront(const T& value)
 	{
-		//Create new node
+		// Create new node
 		Node<T>* node = new Node<T>(value);
 
-		//Set new nodes next to the current head
+		// Set new nodes next to the current head
 		node->next = head;
 
-		//Point head to the new node
+		// Point head to the new node
 		head = node;
 	}
 
 	void popFront()
 	{
-		//Ta bort första noden
-		//Ändra headern till den första nodens next.
+		// Ta bort första noden
+		// Ändra headern till den första nodens next.
 	}
  
 	void clear()
@@ -80,26 +80,27 @@ public:
 
 	void eraseAfter(T& node)
 	{
-		//Ta bort nodens next
-		//Kalla på next nodes destruktor?
+		// Ta bort nodens next
+		// Kalla på next nodes destruktor?
 	}
 
 	void swap(ForwardList<T> listToSwap)
 	{
-		//Ändra den listan som kallar på funktionen med den listan som skickas in
-		//Kolla så att båda har samma <T>
+		// Ändra den listan som kallar på funktionen med den listan som skickas in
+		// Kolla så att båda har samma <T>
 	}
 
 	// Iterator
 	class Iterator
 	{
 	public:
-		//Constructor
+		// Constructor
 		Iterator()
 		{
 
 		}
-		//Destructor
+
+		// Destructor
 		~Iterator()
 		{
 

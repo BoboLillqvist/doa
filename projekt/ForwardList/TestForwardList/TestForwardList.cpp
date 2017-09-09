@@ -18,17 +18,19 @@ namespace TestForwardList
 
 		TEST_METHOD(TestPushFront)
 		{
-			ForwardList<int> fl;
-			ForwardList<int> f2;
-
+			ForwardList<int> list1;
+			ForwardList<int> list2;
 			int x = 5, y = 10;
 
-			fl.pushFront(x);
-			fl.pushFront(y);
-			f2.pushFront(x);
+			list1.pushFront(x);
+			list1.pushFront(y);
+			list2.pushFront(x);
 
-			Assert::AreEqual(false, fl.empty());
-			Assert::AreEqual(false, f2.empty());
+            // list1: [10]->[5]
+            // list2: [5]
+
+			Assert::AreEqual(false, list1.empty());
+			Assert::AreEqual(false, list2.empty());
 		}
 
 		TEST_METHOD(TestPopFront)
@@ -39,11 +41,14 @@ namespace TestForwardList
             list1.pushFront(y);
             list1.pushFront(z);
 
-            // list: 5, 7, 14
-            list1.popFront();
+            // list: [5]->[7]->[14]
 
-            // After pop, the list should be: 7, 14
+            list1.popFront();
+            // After popFront, the list should be: [7]->[14]
+
             Assert::AreEqual(list1.front(), 7);
+
+            // TODO: Testa att popa tom lista
 		}
 
 		TEST_METHOD(TestIteratorBeginEnd)
