@@ -42,13 +42,29 @@ namespace TestForwardList
             list1.pushFront(z);
 
             // list: [5]->[7]->[14]
-
+			Assert::AreEqual(list1.front(), 14);
             list1.popFront();
+
             // After popFront, the list should be: [7]->[14]
+			Assert::AreEqual(list1.front(), 7);
 
-            Assert::AreEqual(list1.front(), 7);
+			list1.popFront();
+			Assert::AreEqual(list1.front(), 5);
+			list1.popFront();
+			Assert::IsTrue(&list1.front() == nullptr);
 
-            // TODO: Testa att popa tom lista
+			//empty list
+			bool exceptionThrown = false;
+			try
+			{
+				list1.popFront(); //Här bör en exception skickas.
+			}
+			catch(const std::exception&)
+			{
+				exceptionThrown = true;
+			}
+			Assert::IsTrue(exceptionThrown);
+			Assert::IsTrue(&list1.front() == nullptr);
 		}
 
 		TEST_METHOD(TestIteratorBeginEnd)
