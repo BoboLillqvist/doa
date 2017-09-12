@@ -1,5 +1,5 @@
 #pragma once
-
+#include <exception>
 template <class T>
 struct Node
 {
@@ -64,8 +64,14 @@ public:
 
 	void popFront()
 	{
-		// Ta bort första noden
-		// Ändra headern till den första nodens next.
+		if (head == nullptr)
+		{
+			throw std::exception("Trying to pop empty list");
+		}
+		Node<T>* temp = head->next;
+
+		delete head;
+		head = temp;
 	}
  
 	void clear()
