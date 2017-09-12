@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.8
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ForwardList", "forward_list\forward_list.vcxproj", "{9B398928-0CC8-459B-983F-14AAC63C2EC2}"
 EndProject
@@ -15,16 +15,16 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9B398928-0CC8-459B-983F-14AAC63C2EC2}.Debug|x64.ActiveCfg = Debug|x64
-		{9B398928-0CC8-459B-983F-14AAC63C2EC2}.Debug|x64.Build.0 = Debug|x64
+		{9B398928-0CC8-459B-983F-14AAC63C2EC2}.Debug|x64.ActiveCfg = Debug|Win32
+		{9B398928-0CC8-459B-983F-14AAC63C2EC2}.Debug|x64.Build.0 = Debug|Win32
 		{9B398928-0CC8-459B-983F-14AAC63C2EC2}.Debug|x86.ActiveCfg = Debug|Win32
 		{9B398928-0CC8-459B-983F-14AAC63C2EC2}.Debug|x86.Build.0 = Debug|Win32
 		{9B398928-0CC8-459B-983F-14AAC63C2EC2}.Release|x64.ActiveCfg = Release|x64
 		{9B398928-0CC8-459B-983F-14AAC63C2EC2}.Release|x64.Build.0 = Release|x64
 		{9B398928-0CC8-459B-983F-14AAC63C2EC2}.Release|x86.ActiveCfg = Release|Win32
 		{9B398928-0CC8-459B-983F-14AAC63C2EC2}.Release|x86.Build.0 = Release|Win32
-		{89461160-6EBF-4B93-BF43-AA13FEFEB4BC}.Debug|x64.ActiveCfg = Debug|x64
-		{89461160-6EBF-4B93-BF43-AA13FEFEB4BC}.Debug|x64.Build.0 = Debug|x64
+		{89461160-6EBF-4B93-BF43-AA13FEFEB4BC}.Debug|x64.ActiveCfg = Debug|Win32
+		{89461160-6EBF-4B93-BF43-AA13FEFEB4BC}.Debug|x64.Build.0 = Debug|Win32
 		{89461160-6EBF-4B93-BF43-AA13FEFEB4BC}.Debug|x86.ActiveCfg = Debug|Win32
 		{89461160-6EBF-4B93-BF43-AA13FEFEB4BC}.Debug|x86.Build.0 = Debug|Win32
 		{89461160-6EBF-4B93-BF43-AA13FEFEB4BC}.Release|x64.ActiveCfg = Release|x64
