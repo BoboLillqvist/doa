@@ -64,13 +64,17 @@ public:
 
 	void popFront()
 	{
+        // If trying to pop empty list, throw an exception
 		if (head == nullptr)
-		{
 			throw std::exception("Trying to pop empty list");
-		}
+
+        // Temporary node pointer
 		Node<T>* temp = head->next;
 
+        // Delete pop:ed node from memory
 		delete head;
+
+        // Point to next node
 		head = temp;
 	}
  

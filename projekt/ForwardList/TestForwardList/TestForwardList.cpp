@@ -41,19 +41,23 @@ namespace TestForwardList
             list1.pushFront(y);
             list1.pushFront(z);
 
-            // list: [5]->[7]->[14]
+            // list: [14]->[7]->[5]
 			Assert::AreEqual(list1.front(), 14);
             list1.popFront();
 
-            // After popFront, the list should be: [7]->[14]
+            // After popFront, the list should be: [7]->[5]
 			Assert::AreEqual(list1.front(), 7);
-
 			list1.popFront();
+
+            // After popFront, the list should be: [5]
 			Assert::AreEqual(list1.front(), 5);
 			list1.popFront();
+
+			// Empty list
+
 			Assert::IsTrue(&list1.front() == nullptr);
 
-			//empty list
+            // Check if exception is thrown when tying to pop an empty list
 			bool exceptionThrown = false;
 			try
 			{
