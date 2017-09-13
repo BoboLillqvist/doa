@@ -135,12 +135,12 @@ public:
 
 	Iterator begin()
 	{
-
+		return Iterator(head);
 	}
 
 	Iterator end()
 	{
-
+		return Iterator(nullptr);
 	}
 };
 
