@@ -75,6 +75,15 @@ namespace TestForwardList
 		{
 
 		}
+		TEST_METHOD(TestBegin)
+		{
+			ForwardList<int> list1;
+			int x = 5;
+			list1.pushFront(x);
+			ForwardList<int>::Iterator node = list1.begin();
+			Assert::AreEqual((*node).value, x);
+			Assert::AreEqual(node->value, x);
+		}
 	};
 
     TEST_CLASS(TestNode)
