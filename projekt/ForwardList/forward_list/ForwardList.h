@@ -104,8 +104,13 @@ public:
 	class Iterator
 	{
 	public:
+		typedef Iterator selfType;
+		typedef Node<T> valueType;
+		typedef Node<T>& reference;
+		typedef Node<T>* pointer;
+
 		// Constructor
-		Iterator()
+		Iterator(pointer ptr) : ptr_(ptr)
 		{
 
 		}
@@ -115,8 +120,17 @@ public:
 		{
 
 		}
+		reference operator*()
+		{
+			return *ptr_;
+		}
+
+		pointer operator->() 
+		{ 
+			return ptr_; 
+		}
 	private:
-		
+		pointer ptr_;
 	};
 
 	Iterator begin()
