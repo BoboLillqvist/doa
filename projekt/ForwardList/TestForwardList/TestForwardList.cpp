@@ -55,7 +55,7 @@ namespace TestForwardList
 
 			// Empty list
 
-			Assert::IsTrue(&list1.front() == nullptr);
+			//Assert::IsTrue(&list1.front() == nullptr);
 
             // Check if exception is thrown when tying to pop an empty list
 			bool exceptionThrown = false;
@@ -68,7 +68,7 @@ namespace TestForwardList
 				exceptionThrown = true;
 			}
 			Assert::IsTrue(exceptionThrown);
-			Assert::IsTrue(&list1.front() == nullptr);
+			//Assert::IsTrue(&list1.front() == nullptr);
 		}
 
 		TEST_METHOD(TestIteratorBeginEnd)
@@ -83,6 +83,47 @@ namespace TestForwardList
 			ForwardList<int>::Iterator node = list1.begin();
 			Assert::AreEqual((*node).value, x);
 			Assert::AreEqual(node->value, x);
+		}
+		TEST_METHOD(TestCopyConstructor)
+		{
+			ForwardList<int> list1;
+			int x = 5, y = 7, z = 14;
+			list1.pushFront(x);
+			list1.pushFront(y);
+			list1.pushFront(z);
+
+			//List1=[14]->[7]->[5]
+			ForwardList<int> list2(list1);
+			Assert::AreEqual(list1.front(), list2.front());
+			list1.popFront();
+			list2.popFront();
+			Assert::AreEqual(list1.front(), list2.front());
+		}
+		TEST_METHOD(TestEmptyCopyConstructor)
+		{
+			ForwardList<int> list3;
+			// Check if exception is thrown when tying to check front on an empty list
+			bool exceptionThrown = false;
+			try
+			{
+				list3.front(); //Här bör en exception skickas.
+			}
+			catch (const std::exception&)
+			{
+				exceptionThrown = true;
+			}
+			Assert::IsTrue(exceptionThrown);
+			ForwardList<int> list4(list3);
+			exceptionThrown = false;
+			try
+			{
+				list4.front(); //Här bör en exception skickas.
+			}
+			catch (const std::exception&)
+			{
+				exceptionThrown = true;
+			}
+			Assert::IsTrue(exceptionThrown);
 		}
 	};
 
