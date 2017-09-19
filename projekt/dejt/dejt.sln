@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dejt", "dejt\dejt.vcxproj", "{CD659670-F57A-4335-B715-1A62AB85F0C1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Testdejt", "Testdejt\Testdejt.vcxproj", "{96258FCA-38D2-4D1E-9C51-24169B33A9D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{CD659670-F57A-4335-B715-1A62AB85F0C1}.Release|x64.Build.0 = Release|x64
 		{CD659670-F57A-4335-B715-1A62AB85F0C1}.Release|x86.ActiveCfg = Release|Win32
 		{CD659670-F57A-4335-B715-1A62AB85F0C1}.Release|x86.Build.0 = Release|Win32
+		{96258FCA-38D2-4D1E-9C51-24169B33A9D4}.Debug|x64.ActiveCfg = Debug|x64
+		{96258FCA-38D2-4D1E-9C51-24169B33A9D4}.Debug|x64.Build.0 = Debug|x64
+		{96258FCA-38D2-4D1E-9C51-24169B33A9D4}.Debug|x86.ActiveCfg = Debug|Win32
+		{96258FCA-38D2-4D1E-9C51-24169B33A9D4}.Debug|x86.Build.0 = Debug|Win32
+		{96258FCA-38D2-4D1E-9C51-24169B33A9D4}.Release|x64.ActiveCfg = Release|x64
+		{96258FCA-38D2-4D1E-9C51-24169B33A9D4}.Release|x64.Build.0 = Release|x64
+		{96258FCA-38D2-4D1E-9C51-24169B33A9D4}.Release|x86.ActiveCfg = Release|Win32
+		{96258FCA-38D2-4D1E-9C51-24169B33A9D4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
