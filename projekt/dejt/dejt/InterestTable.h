@@ -17,7 +17,7 @@ public:
         return list;
     }
 
-    int numberOfCommonInterests()
+    int numberOfCommonInterests(InterestTable& other)
     {
         return -1;
     }
