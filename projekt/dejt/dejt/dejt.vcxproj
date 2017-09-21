@@ -114,6 +114,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Couple.h" />
     <ClInclude Include="CoupleList.h" />
     <ClInclude Include="Person.h" />
   </ItemGroup>
