@@ -1,13 +1,13 @@
 #pragma once
 #include <forward_list>
 
-class InterestTalbe
+class InterestTable
 {
 private:
     std::forward_list<std::string> list;
 
 public:
-    InterestTalbe()
+    InterestTable()
     {
 
     }
