@@ -26,5 +26,8 @@ public:
             it_.add(interest);
     }
 
-	}
+    InterestTable getInterestTable()
+    {
+        return it_;
+    }
 };
