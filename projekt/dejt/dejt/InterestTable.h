@@ -7,9 +7,13 @@ private:
     std::forward_list<std::string> list;
 
 public:
-    InterestTable()
-    {
+    InterestTable() {}
 
+    void add(std::string interest)
+    {
+        // TODO: Kolla om intresset redan finns i listan
+        // TODO: Kör en toLower() innan, och ev. skala whitespace
+        list.push_front(interest);
     }
 
     std::forward_list<std::string>& getList()
