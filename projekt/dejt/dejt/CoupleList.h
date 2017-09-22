@@ -14,6 +14,6 @@ public:
 
 	std::forward_list<Couple>& getList()
 	{
-
+		return list;
 	}
 };
