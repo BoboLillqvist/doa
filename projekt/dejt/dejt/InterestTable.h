@@ -1,7 +1,8 @@
 #pragma once
 #include <forward_list>
-#include <algorithm>
-#include <string>
+#include <algorithm>    // transform()
+#include <string>       // tolower
+
 class InterestTable
 {
 private:
@@ -12,16 +13,18 @@ public:
 
 	void add(std::string interest)
 	{
-		bool isInList = false;
-		// TODO: Kolla om intresset redan finns i listan
-		// TODO: Kör en toLower() innan, och ev. skala whitespace
-		std::transform(interest.begin(), interest.end(), interest.begin(), ::tolower);
+        // Flag
+		bool inList = false;
+
+        // Transform interest to lowercase
+		std::transform(interest.begin(), interest.end(), interest.begin(), tolower);
+
+        // Check if interest already in list
 		for (auto thisInterest : list)
-		{
-			if (thisInterest==interest)
-				isInList = true;
-		}
-		if (!isInList && !(interest==""))
+			if (thisInterest == interest)
+				inList = true;
+
+		if (!inList && interest != "")
 			list.push_front(interest);
     }
 
@@ -36,14 +39,11 @@ public:
 
         // Loop this persons interests
         for (auto thisInterest : list)
-        {
             // Check if current interest is in the other persons interest table 
             for (auto otherInterest : other.getList())
-            {
                 if (thisInterest == otherInterest)
                     commonCounter++;
-            }
-        }
+
         return commonCounter;
     }
 };
