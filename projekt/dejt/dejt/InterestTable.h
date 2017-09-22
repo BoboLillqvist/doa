@@ -19,6 +19,19 @@ public:
 
     int numberOfCommonInterests(InterestTable& other)
     {
-        return -1;
+        int commonCounter = 0;
+
+        // Loop this persons interests
+        for (auto thisInterest : list)
+        {
+            // Check if current interest is in the other persons interest table 
+            for (auto otherInterest : other.getList())
+            {
+                if (thisInterest.compare(otherInterest) == 0)
+                    commonCounter++;
+            }
+        }
+
+        return commonCounter;
     }
 };
