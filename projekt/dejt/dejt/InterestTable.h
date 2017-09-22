@@ -46,4 +46,24 @@ public:
 
         return commonCounter;
     }
+
+    bool operator==(InterestTable& rhs)
+    {
+        // Flag
+        bool foundCommon = false;
+
+        for (auto thisInterest : list)
+        {
+            for (auto otherInterest : rhs.getList())
+                if (thisInterest == otherInterest)
+                    foundCommon = true;
+
+            if (!foundCommon)
+                return false;
+
+            // Reset flag
+            foundCommon = false;
+        }
+        return true;
+    }
 };
