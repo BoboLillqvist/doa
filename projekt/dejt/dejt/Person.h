@@ -12,6 +12,8 @@ private:
 	InterestTable it_;
 
 public:
+    Person() {}
+
     Person(size_t id, std::string name, char gender, std::vector<char> preference, std::vector<std::string> interests)
 	{
         id_ = id;

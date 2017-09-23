@@ -14,7 +14,7 @@ TEST_CASE("Test Person Class")
     interests2.push_back("Mat");
     interests2.push_back("sport");
 
-    Person person1(1, "Bob", 'm', {'m', 'f'}, interests);
+    Person person1(1, "Bob", 'm', { 'm', 'f' }, interests);
     Person person2(2, "Jens", 'm', { 'm', 'f' }, interests2);
 
     SECTION("Test person interest table")
