@@ -1,2 +1,4 @@
-0,"Johan",39,'m',"f";sport,mat,film
-1,"Niklas",20,'m',"m";mat,resa,musik
+0,"Johan",39,'m',"fm";sport,mat,film
+1,"Niklas",20,'m',"f";mat,resa,musik
+2,"Maja",19,'f',"m";ishockey,bilar
+3,"Olle",55,'m',"f";öl,snus,blommor

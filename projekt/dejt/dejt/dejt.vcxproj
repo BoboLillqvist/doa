@@ -117,6 +117,7 @@
     <ClInclude Include="Couple.h" />
     <ClInclude Include="CoupleList.h" />
     <ClInclude Include="Date.h" />
+    <ClInclude Include="FileHandling.h" />
     <ClInclude Include="Person.h" />
   </ItemGroup>
   <ItemGroup>
