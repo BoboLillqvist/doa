@@ -9,6 +9,11 @@ private:
 
 public:
     Couple() {}
+	Couple(Person& persona,Person& personb) 
+	{
+		setPersonA(persona);
+		setPersonB(personb);
+	}
 
     Person& getBoy()
     {
