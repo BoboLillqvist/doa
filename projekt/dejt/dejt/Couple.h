@@ -15,13 +15,13 @@ public:
 		setPersonB(personb);
 	}
 
-    Person& getBoy()
+    Person& getPersonA()
     {
-        return boy;
+        return *personA;
     }
 
-    Person& getGirl()
+    Person& getPersonB()
     {
-        return girl;
+        return *personB;
     }
 };
