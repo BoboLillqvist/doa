@@ -112,6 +112,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="TestCouple.cpp" />
     <ClCompile Include="TestInterestTable.cpp" />
     <ClCompile Include="TestPerson.cpp" />
     <ClCompile Include="TestPersonList.cpp" />
