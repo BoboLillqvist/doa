@@ -43,5 +43,12 @@ TEST_CASE("Test Couplelist Class")
 		REQUIRE(couplelist1.getList().begin()->getPersonA().getInterestTable() == person3.getInterestTable()); //sweet mother of mercy
 		REQUIRE(couplelist1.getList().begin()->getPersonB().getInterestTable() == person4.getInterestTable());
 	}
+	SECTION("Test couplelist with iterator")
+	{
+		auto it = couplelist1.getList().begin();
+		it++;
+		REQUIRE(it->getPersonA().getInterestTable() == person1.getInterestTable());
+		REQUIRE(it->getPersonB().getInterestTable() == person2.getInterestTable());
+	}
 
 }
