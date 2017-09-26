@@ -4,8 +4,8 @@
 class Couple
 {
 private:
-    Person boy;
-    Person girl;
+    Person* personA;
+    Person* personB;
 
 public:
     Couple() {}
