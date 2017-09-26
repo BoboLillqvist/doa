@@ -37,5 +37,22 @@ public:
 
         listFile.close();
     }
+
+    Person personFromString(std::string line)
+    {
+        // TODO: G�r s�kert att g�ra lite mer elegant
+        size_t id;
+        std::string name;
+        char gender;
+        std::string preference;
+        std::vector<std::string> interests = { "mat", "k�rv" };
+
+        std::istringstream iss(line);
+
+        iss >> id >> name >> gender >> preference;
+
+        Person person(id, name, gender, preference, interests);
+        return person;
+    }
     }
 };
