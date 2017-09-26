@@ -11,6 +11,10 @@ public:
 	{
 
 	}
+	void add(Couple couple)
+	{
+		list.push_front(couple);
+	}
 
 	std::forward_list<Couple>& getList()
 	{
