@@ -54,5 +54,13 @@ public:
         Person person(id, name, gender, preference, interests);
         return person;
     }
+
+    int numPersons()
+    {
+        int persons = 0;
+        for (auto person : list)
+            persons++;
+
+        return persons;
     }
 };
