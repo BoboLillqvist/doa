@@ -15,6 +15,16 @@ public:
 		setPersonB(personb);
 	}
 
+	void setPersonA(Person& person)
+	{
+		personA = &person;
+	}
+
+	void setPersonB(Person& person)
+	{
+		personB = &person;
+	}
+
     Person& getPersonA()
     {
         return *personA;
