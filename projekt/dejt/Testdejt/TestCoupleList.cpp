@@ -38,7 +38,7 @@ TEST_CASE("Test Couplelist Class")
 	couplelist1.add(couple1);
 	couplelist1.add(couple2);
 
-	SECTION("Test couplelist")
+	SECTION("Test couplelist with begin")
 	{
 		REQUIRE(couplelist1.getList().begin()->getPersonA().getInterestTable() == person3.getInterestTable()); //sweet mother of mercy
 		REQUIRE(couplelist1.getList().begin()->getPersonB().getInterestTable() == person4.getInterestTable());
