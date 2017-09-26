@@ -40,12 +40,12 @@ public:
 
     Person personFromString(std::string line)
     {
-        // TODO: Gï¿½r sï¿½kert att gï¿½ra lite mer elegant
+        // TODO: Går säkert att göra lite mer elegant
         size_t id;
         std::string name;
         char gender;
         std::string preference;
-        std::vector<std::string> interests = { "mat", "kï¿½rv" };
+        std::vector<std::string> interests = { "mat", "körv" };
 
         std::istringstream iss(line);
 
