@@ -11,7 +11,7 @@ public:
 	{
 
 	}
-	void add(Couple couple)
+	void add(Couple& couple)
 	{
 		list.push_front(couple);
 	}
