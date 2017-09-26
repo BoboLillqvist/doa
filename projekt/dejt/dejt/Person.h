@@ -8,13 +8,13 @@ private:
     size_t id_;
     std::string name_;
     char gender_;
-    std::vector<char> preference_;
+    std::string preference_;
 	InterestTable it_;
 
 public:
     Person() {}
 
-    Person(size_t id, std::string name, char gender, std::vector<char> preference, std::vector<std::string> interests)
+    Person(size_t id, std::string name, char gender, std::string preference, std::vector<std::string> interests)
 	{
         id_ = id;
         name_ = name;
