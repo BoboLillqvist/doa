@@ -43,4 +43,25 @@ public:
 		}
 		return amount;
 	}
+
+	int numberOfPersons() //Förutsätter att en person inte dubbellagras i olika listor
+	{
+		int amount = 0;
+		
+		for (auto it1 = boys.getList().begin(); it1 != boys.getList().end(); it1++) 
+		{
+			amount++;
+		}
+
+		for (auto it2 = girls.getList().begin(); it2 != girls.getList().end(); it2++) 
+		{
+			amount++;
+		}
+		for (auto it3 = couples.getList().begin(); it3 != couples.getList().end(); it3++)
+		{
+			amount++; 
+			amount++;
+		}
+		return amount;
+	}
 };
