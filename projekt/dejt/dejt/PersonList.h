@@ -1,11 +1,11 @@
 #pragma once
+#include "Person.h"
 #include <forward_list>
 #include <iostream>
 #include <fstream> // std::ifstream
 #include <sstream>
 #include <exception>
 #include <vector>
-#include "Person.h"
 
 class PersonList
 {
@@ -32,27 +32,16 @@ public:
             throw std::exception("Could not open file");
 
         // Read line by line
-        while (std::getline(listFile, line))
-            list.push_front(personFromString(line));
+        while (std::getline(listFile, line, '\n'))
+        {
+            Person person;
+            std::istringstream iss(line);
+
+            iss >> person;
+            list.push_front(person);
+        }
 
         listFile.close();
-    }
-
-    Person personFromString(std::string line)
-    {
-        // TODO: Går säkert att göra lite mer elegant
-        size_t id;
-        std::string name;
-        char gender;
-        std::string preference;
-        std::vector<std::string> interests = { "mat", "körv" };
-
-        std::istringstream iss(line);
-
-        iss >> id >> name >> gender >> preference;
-
-        Person person(id, name, gender, preference, interests);
-        return person;
     }
 
     int numPersons()
