@@ -19,4 +19,18 @@ public:
 
 	}
 
+	PersonList& getBoysList()
+	{
+		return boys;
+	}
+
+	PersonList& getGirlsList()
+	{
+		return girls;
+	}
+
+	CoupleList& getCouplesList()
+	{
+		return couples;
+	}
 };
