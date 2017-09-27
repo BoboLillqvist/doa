@@ -147,6 +147,9 @@ public:
 			return false;
 	}
 
+	int compareInterests(Person& personA, Person& personB)
+	{
+		return (personA.getInterestTable().numberOfCommonInterests(personB.getInterestTable()));
 	}
 
 	PersonList& getBoysList()
