@@ -88,6 +88,39 @@ public:
 	{
 		//Todo: removeperson from list
 	}
+
+	bool compareAge(Person& personA, Person& personB)
+	{
+		if (personB.getAge() > personA.getAge())
+		{
+			if ((((personB.getAge()) / 2) + 7) > personA.getAge())
+			{
+				return false;
+			}
+		}
+		if (personB.getAge()<personA.getAge())
+		{
+			if ((((personB.getAge()) * 2) - 7) < personA.getAge())
+			{
+				return false;
+			}
+		}
+		if (personA.getAge() > personB.getAge())
+		{
+			if ((((personA.getAge()) / 2) + 7) > personB.getAge())
+			{
+				return false;
+			}
+		}
+		if (personA.getAge()<personB.getAge())
+		{
+			if ((((personA.getAge()) * 2) - 7) < personB.getAge())
+			{
+				return false;
+			}
+		}
+			return true;
+	}
 	}
 
 	PersonList& getBoysList()
