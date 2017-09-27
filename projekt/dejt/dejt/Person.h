@@ -71,3 +71,50 @@ public:
         return counter;
     }
 
+    // Friends
+    friend std::istream& operator>>(std::istream&, Person& person);
+};
+
+inline
+std::istream& operator>>(std::istream& is, Person& person)
+{
+    std::string junk;
+
+    // ID
+    is >> person.id_; std::getline(is, junk, ';');
+
+    // Age
+    is >> person.age_; std::getline(is, junk, ';');
+
+    // Name
+    std::getline(is, person.name_, ';');
+
+    // Gender
+    is >> person.gender_; std::getline(is, junk, ';');
+
+    // TODO: Fixa generalisera kod
+
+    // Preferences
+    std::string preferences;
+    std::getline(is, preferences, ';');
+    std::istringstream istream(preferences);
+    std::string pref;
+
+    // Read comma separated values and push back in vector
+    while (std::getline(istream, pref, ','))
+        person.preferences_.push_back(pref);
+
+
+    // Interests
+    std::string interests;
+    std::getline(is, interests);
+    std::istringstream iss(interests);
+    std::string interest;
+
+    // Read comma separated values and push back in vector
+    while (std::getline(iss, interest, ','))
+        person.getInterestTable().add(interest);
+
+    return is;
+}
+
