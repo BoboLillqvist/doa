@@ -58,7 +58,7 @@ public:
         return preferences_;
     }
 
-    InterestTable getInterestTable()
+    InterestTable& getInterestTable()
     {
         return it_;
     }
