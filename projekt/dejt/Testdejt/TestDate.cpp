@@ -35,11 +35,12 @@ TEST_CASE("Test Date Class")
 	interests5.push_back("cider");
 	interests5.push_back("misär");
 
-	Person person1(1, "Bob", 'm', "f", interests);
-	Person person2(2, "Klara", 'f', "m", interests2);
-	Person person3(3, "Babsan", 'f', "f", interests3);
-	Person person4(4, "Jemenia", 'f', "f", interests4);
-	Person person5(5, "Jamalia", 'f', "m", interests5);
+    Person person1(0, 32, "Bob", 'm', { "female" }, interests);
+    Person person2(1, 22, "Klara", 'f', { "male" }, interests2);
+    Person person3(2, 49, "Babsan", 'f', { "female" }, interests3);
+    Person person4(3, 18, "Jemenia", 'f', { "female" }, interests4);
+    Person person5(4, 88, "Jamalia", 'f', { "male" }, interests5);
+
 	Couple couple1(person1, person2);
 	Couple couple2;
 	couple2.setPersonA(person3);
