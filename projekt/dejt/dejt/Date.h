@@ -16,6 +16,53 @@ public:
 
 	void match()
 	{
+		int threshhold = 1;
+		for (auto it1 : boys.getList())
+		{
+			Person* favorite=nullptr;
+			int bestMatch = 0, temp=0;
+			for (auto it2 : boys.getList())
+			{
+				if (it1.getID() != it2.getID())
+				{
+					compatibility(threshhold, it1, it2, bestMatch, temp, favorite);
+				}
+			}
+
+			for (auto it3 : girls.getList())
+			{
+				if (it1.getID() != it3.getID())
+				{
+					compatibility(threshhold, it1, it3, bestMatch, temp, favorite);
+				}
+				
+			}
+
+			if (favorite != nullptr)
+			{
+				createCouple(it1, *favorite);
+			}
+		}
+
+		for (auto it4 : girls.getList())
+		{
+			Person* favorite2=nullptr;
+			int bestMatch2 = 0, temp2 = 0;
+
+			for (auto it5 : girls.getList())
+			{
+				if (it4.getID() != it5.getID())
+				{
+					compatibility(threshhold, it4, it5, bestMatch2, temp2, favorite2);
+				}
+			}
+
+			if (favorite2 != nullptr)
+			{
+				createCouple(it4, *favorite2);
+			}
+		}
+	}
 
 	}
 
