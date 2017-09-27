@@ -114,7 +114,7 @@ std::istream& operator>>(std::istream& is, Person& person)
 
     // Read comma separated values and push back in vector
     while (std::getline(iss, interest, ','))
-        person.getInterestTable().add(interest);
+        person.it_.add(interest);
 
     return is;
 }
