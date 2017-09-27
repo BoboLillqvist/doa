@@ -28,4 +28,10 @@ TEST_CASE("Test Interest table")
     {
         REQUIRE(it1.numberOfCommonInterests(it2) == 3);
     }
+
+    SECTION("Test numberOfInterests()", "[interests]")
+    {
+        REQUIRE(it1.numberOfInterests() == 4);
+        REQUIRE(it2.numberOfInterests() == 5);
+    }
 }
