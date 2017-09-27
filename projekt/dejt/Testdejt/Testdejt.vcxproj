@@ -121,9 +121,6 @@
   <ItemGroup>
     <ClInclude Include="catch.hpp" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="testmale.txt" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

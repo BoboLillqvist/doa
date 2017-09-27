@@ -1,4 +1,4 @@
-0,"Johan",39,'m',"fm";sport,mat,film
-1,"Niklas",20,'m',"f";mat,resa,musik
-2,"Maja",19,'f',"m";ishockey,bilar
-3,"Olle",55,'m',"f";öl,snus,blommor
+0;Bob;39;m;female,male;sport,mat,film
+1;Niklas;20;male,female;mat,resa,musik,sprit
+2;Torsten;19;f;male;ishockey,bilar
+3;Olle;55;m;female;drinkar,snus,blommor
