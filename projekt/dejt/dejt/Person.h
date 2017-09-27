@@ -9,7 +9,7 @@ private:
     size_t age_;
     std::string name_;
     char gender_;
-    std::vector<std::string> preferences_;
+    std::vector<std::string> preferences_; //�ndra till vector av chars ist�llet? Blir l�ttare att j�mnf�ra med gender i s� fall.
 	InterestTable it_;
 
 public:
