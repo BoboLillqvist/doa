@@ -6,6 +6,7 @@ class Person
 {
 private:
     size_t id_;
+    size_t age_;
     std::string name_;
     char gender_;
     std::vector<std::string> preferences_;
