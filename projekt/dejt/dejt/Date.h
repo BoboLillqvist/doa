@@ -77,6 +77,12 @@ public:
 		}
 
 	}
+
+	void createCouple(Person& personA, Person& personB)
+	{
+		Couple couple1(personA, personB);
+		couples.add(couple1);
+	}
 	}
 
 	PersonList& getBoysList()
