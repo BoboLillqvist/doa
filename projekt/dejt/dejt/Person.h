@@ -21,6 +21,7 @@ public:
         id_ = id;
         age_ = age;
         name_ = name;
+		gender_ = gender;
         preferences_ = preferences;
         addToInterestTable(interests);
     }
