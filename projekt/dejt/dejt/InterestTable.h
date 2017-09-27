@@ -66,4 +66,13 @@ public:
         }
         return true;
     }
+
+    size_t numberOfInterests()
+    {
+        size_t counter = 0;
+        for (auto interest : list)
+            counter++;
+
+        return counter;
+    }
 };
