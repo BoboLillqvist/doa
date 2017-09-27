@@ -64,6 +64,19 @@ public:
 		}
 	}
 
+	void compatibility(int threshhold, Person& personA, Person& personB, int& bestMatch, int& temp, Person*& favorite)
+	{
+		if ((compareAge(personA, personB) && comparePreferences(personA, personB)))
+		{
+			temp = compareInterests(personA, personB);
+			if ((temp >= threshhold) && (temp > bestMatch))
+			{
+				favorite = &personB;
+				bestMatch = temp;
+			}
+		}
+
+	}
 	}
 
 	PersonList& getBoysList()
