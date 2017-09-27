@@ -33,4 +33,14 @@ public:
 	{
 		return couples;
 	}
+
+	int numberOfCouples()
+	{
+		int amount = 0;
+		for (auto it=couples.getList().begin(); it!= couples.getList().end();it++) 
+		{
+			amount++;
+		}
+		return amount;
+	}
 };
