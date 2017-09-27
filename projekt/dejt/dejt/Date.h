@@ -83,6 +83,11 @@ public:
 		Couple couple1(personA, personB);
 		couples.add(couple1);
 	}
+
+	void removePersonFromList(Person& personA)
+	{
+		//Todo: removeperson from list
+	}
 	}
 
 	PersonList& getBoysList()
