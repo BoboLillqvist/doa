@@ -20,4 +20,5 @@ public:
 	{
 		return list;
 	}
+	//TODO: Filspararfunktion för couplelist
 };
