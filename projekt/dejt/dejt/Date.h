@@ -179,6 +179,8 @@ public:
 
 	int numberOfPersons() //Förutsätter att en person inte dubbellagras i olika listor
 	{
+		// EXTRA: Andra numberOfPersons
+		// sa att den raknar unika persons genom t.ex. ID sa att det inte spelar nagon roll om en person ar lagrad i flera listor. 
 		int amount = 0;
 		
 		for (auto it1 = boys.getList().begin(); it1 != boys.getList().end(); it1++) 
