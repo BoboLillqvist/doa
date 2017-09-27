@@ -8,17 +8,17 @@ private:
     size_t id_;
     std::string name_;
     char gender_;
-    std::string preference_;
+    std::vector<std::string> preferences_;
 	InterestTable it_;
 
 public:
     Person() {}
 
-    Person(size_t id, std::string name, char gender, std::string preference, std::vector<std::string> interests)
+    Person(size_t id, size_t age, std::string name, char gender, std::vector<std::string> preferences, std::vector<std::string> interests)
 	{
         id_ = id;
         name_ = name;
-        preference_ = preference;
+        preferences_ = preferences;
         addToInterestTable(interests);
     }
 
