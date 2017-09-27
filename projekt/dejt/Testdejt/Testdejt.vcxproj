@@ -114,6 +114,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="TestCouple.cpp" />
     <ClCompile Include="TestCoupleList.cpp" />
+    <ClCompile Include="TestDate.cpp" />
     <ClCompile Include="TestInterestTable.cpp" />
     <ClCompile Include="TestPerson.cpp" />
     <ClCompile Include="TestPersonList.cpp" />
