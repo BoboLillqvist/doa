@@ -62,7 +62,7 @@ TEST_CASE("Test Person Class")
         SECTION("Test if interests was stored", "[interests]")
         {
             CHECK(bob.getInterestTable().numberOfInterests() == 3);
-            std::string personInterests[] = { "kaffe", "sport", "sprit" };
+            std::string personInterests[] = { "sprit", "sport", "kaffe" };
 
             size_t i = 0;
             for (auto interest : bob.getInterestTable().getList())
