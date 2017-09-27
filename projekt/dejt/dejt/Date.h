@@ -121,6 +121,32 @@ public:
 		}
 			return true;
 	}
+
+	bool comparePreferences(Person& personA, Person& personB)
+	{
+
+		//Ta den forsta personens preference. Ar den samma av samma gender som preferensen? Kolla sedan om detsamma ar sant for den andra.
+		bool matchAtoB = false, matchBtoA = false;
+		for (auto it1 : personA.getPreferences())
+		{
+			if ((it1 == "female") && (personB.getGender() == 'f'))
+				matchAtoB = true;
+			if ((it1 == "male") && (personB.getGender() == 'm'))
+				matchAtoB = true;
+		}
+		for (auto it2 : personB.getPreferences())
+		{
+			if ((it2 == "female") && (personA.getGender() == 'f'))
+				matchBtoA = true;
+			if ((it2 == "male") && (personA.getGender() == 'm'))
+				matchBtoA = true;
+		}
+		if (matchAtoB && matchBtoA)
+			return true;
+		else
+			return false;
+	}
+
 	}
 
 	PersonList& getBoysList()
