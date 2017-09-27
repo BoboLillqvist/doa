@@ -1,8 +1,4 @@
 #include "catch.hpp"
-#include "../dejt/Person.h"
-#include "../dejt/Couple.h"
-#include "../dejt/CoupleList.h"
-#include "../dejt/PersonList.h"
 #include "../dejt/Date.h"
 #include <vector> //look at me vector
 #include <iostream>
