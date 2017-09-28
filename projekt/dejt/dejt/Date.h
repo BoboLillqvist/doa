@@ -17,11 +17,11 @@ public:
 	void match()
 	{
 		int threshhold = 1;
-		for (auto it1 : boys.getList())
+		for (auto &it1 : boys.getList())
 		{
 			Person* favorite=nullptr;
 			int bestMatch = 0, temp=0;
-			for (auto it2 : boys.getList())
+			for (auto &it2 : boys.getList())
 			{
 				if (it1.getID() != it2.getID())
 				{
@@ -29,7 +29,7 @@ public:
 				}
 			}
 
-			for (auto it3 : girls.getList())
+			for (auto &it3 : girls.getList())
 			{
 				if (it1.getID() != it3.getID())
 				{
@@ -44,12 +44,12 @@ public:
 			}
 		}
 
-		for (auto it4 : girls.getList())
+		for (auto &it4 : girls.getList())
 		{
 			Person* favorite2=nullptr;
 			int bestMatch2 = 0, temp2 = 0;
 
-			for (auto it5 : girls.getList())
+			for (auto &it5 : girls.getList())
 			{
 				if (it4.getID() != it5.getID())
 				{
