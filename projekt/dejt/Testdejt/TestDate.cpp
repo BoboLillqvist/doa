@@ -170,8 +170,8 @@ TEST_CASE("Test date match")
 		REQUIRE(date.numberOfPersons() == 9); //7 personer i listorna, 2 dubbellagras i couple så 9 totalt.
 		REQUIRE(date.getCouplesList().getList().begin()->getPersonA().getAge() == 30); //Get age är 3435973836...? 
 		REQUIRE(date.getCouplesList().getList().begin()->getPersonA().getID() == 5); //ID också?
-		//REQUIRE(date.getCouplesList().getList().begin()->getPersonB().getAge() == 31);
-		//REQUIRE((date.getCouplesList().getList().begin()->getPersonA().getInterestTable()) == (date.getCouplesList().getList().begin()->getPersonB().getInterestTable())); //Bad allocation
-		//REQUIRE(date.getCouplesList().getList().begin()->getPersonB().getInterestTable() == person2.getInterestTable());
+		REQUIRE(date.getCouplesList().getList().begin()->getPersonB().getAge() == 31);
+		REQUIRE(date.getCouplesList().getList().begin()->getPersonB().getInterestTable() == person7.getInterestTable());
+		REQUIRE(date.getCouplesList().getList().begin()->getPersonB().getInterestTable() == date.getCouplesList().getList().begin()->getPersonB().getInterestTable());
 	}
 }
