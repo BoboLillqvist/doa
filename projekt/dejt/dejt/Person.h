@@ -34,27 +34,27 @@ public:
     }
 
     // Getters
-    size_t getID()
+    size_t getID() const
     {
         return id_;
     }
 
-    size_t getAge()
+    size_t getAge() const
     {
         return age_;
     }
 
-    std::string getName()
+    std::string getName() const
     {
         return name_;
     }
 
-    char getGender()
+    char getGender() const
     {
         return gender_;
     }
 
-    std::vector<std::string> getPreferences()
+    std::vector<std::string> getPreferences() const
     {
         return preferences_;
     }
@@ -64,7 +64,7 @@ public:
         return it_;
     }
 
-    size_t numberOfPreferences()
+    size_t numberOfPreferences() const
     {
         size_t counter = 0;
         for (auto pref : preferences_)
