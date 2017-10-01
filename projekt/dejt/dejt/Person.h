@@ -165,12 +165,14 @@ std::ostream& operator<<(std::ostream& os, Person& person)
     std::string nameToStore = person.name_;
     std::transform(nameToStore.begin(), nameToStore.end(), nameToStore.begin(), tolower);
 
+    // Append person data to stream
     os << person.id_ << ";"
        << nameToStore << ";"
        << person.age_ << ";"
        << person.gender_ << ";"
        << person.preferencesToString(person.preferences_) << ";"
-       << person.interestsToString() << "\n";
+       << person.interestsToString()
+       << "\n";
 
     return os;
 }
