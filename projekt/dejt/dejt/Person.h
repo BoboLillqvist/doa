@@ -2,6 +2,8 @@
 #include "InterestTable.h"
 #include <vector>
 
+typedef std::forward_list<std::string>::iterator interestsIterator;
+
 class Person
 {
 private:
@@ -82,6 +84,26 @@ public:
             ss << ((item == list.back()) ? "" : ",");
         }
         
+        return ss.str();
+    }
+
+    std::string interestsToString()
+    {
+        std::stringstream ss;
+        auto list = it_.getList();
+        auto firstElement = list.begin();
+        auto lastElement = list.end();
+
+        interestsIterator it = firstElement;
+        size_t numOfInterests = it_.numberOfInterests();
+        size_t counter = 0;
+
+        for (firstElement, counter; it != lastElement; ++it, counter++)
+        {
+            ss << *it;
+            ss << ((counter <  numOfInterests - 1) ? "," : "");
+        }
+
         return ss.str();
     }
 
