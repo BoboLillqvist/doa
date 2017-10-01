@@ -73,6 +73,18 @@ public:
         return counter;
     }
 
+    std::string preferencesToString(std::vector<std::string> list) const
+    {
+        std::stringstream ss;
+        for (auto item : list)
+        {
+            ss << item;
+            ss << ((item == list.back()) ? "" : ",");
+        }
+        
+        return ss.str();
+    }
+
     // Friends
     friend std::istream& operator>>(std::istream&, Person& person);
 };
