@@ -32,6 +32,14 @@ TEST_CASE("Test Person Class")
         REQUIRE(maja.preferencesToString(maja.getPreferences()) == majasPreferences);
     }
 
+    SECTION("Test interestsToString()")
+    {
+        std::string bobsInterests = "mat,film,sport";
+        std::string majasInterests = "sport,mat,film";
+        REQUIRE(bob.interestsToString() == bobsInterests);
+        REQUIRE(maja.interestsToString() == majasInterests);
+    }
+
     SECTION("Test >> operator overload")
     {
         Person bob;
