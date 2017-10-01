@@ -108,7 +108,10 @@ public:
     }
 
     // Friends
-    friend std::istream& operator>>(std::istream&, Person& person);
+    friend std::istream& operator>>(std::istream& is, Person& person);
+
+    // TODO: Ska egentligen vara const Person& men fattar inte hur man ska göra just nu
+    friend std::ostream& operator<<(std::ostream& os, Person& person);
 };
 
 inline
@@ -154,3 +157,20 @@ std::istream& operator>>(std::istream& is, Person& person)
     return is;
 }
 
+inline
+std::ostream& operator<<(std::ostream& os, Person& person)
+{
+
+    // Transform Bob -> bob
+    std::string nameToStore = person.name_;
+    std::transform(nameToStore.begin(), nameToStore.end(), nameToStore.begin(), tolower);
+
+    os << person.id_ << ";"
+       << nameToStore << ";"
+       << person.age_ << ";"
+       << person.gender_ << ";"
+       << person.preferencesToString(person.preferences_) << ";"
+       << person.interestsToString() << "\n";
+
+    return os;
+}
