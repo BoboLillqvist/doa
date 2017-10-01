@@ -44,6 +44,20 @@ public:
         listFile.close();
     }
 
+    void listToFile(std::string filename)
+    {
+        std::ofstream listFile;
+
+        // Open file
+        listFile.open(filename);
+
+        if (!listFile)
+            throw std::exception("Could not open file");
+
+        for (auto person : list)
+            listFile << person;
+    }
+
     int numPersons()
     {
         int persons = 0;
