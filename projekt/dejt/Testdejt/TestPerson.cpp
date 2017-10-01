@@ -72,5 +72,20 @@ TEST_CASE("Test Person Class")
             }
         }
     }
+
+    SECTION("Test << operator overload")
+    {
+        std::string bobExampleLine("0;bob;23;m;male,female;mat,film,sport\n");
+        std::string majaExampleLine("1;maja;30;f;male;sport,mat,film\n");
+
+        std::stringstream bobLine;
+        bobLine << bob;
+
+        std::stringstream majaLine;
+        majaLine << maja;
+
+        REQUIRE(bobLine.str() == bobExampleLine);
+        REQUIRE(majaLine.str() == majaExampleLine);
+    }
 }
 
