@@ -207,11 +207,6 @@ public:
 		{
 			amount++;
 		}
-		for (auto it3 = couples.getList().begin(); it3 != couples.getList().end(); it3++)
-		{
-			amount++; 
-			amount++;
-		}
 		return amount;
 	}
 };
