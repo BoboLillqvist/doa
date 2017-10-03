@@ -192,7 +192,7 @@ public:
 		return amount;
 	}
 
-	int numberOfPersons() //Förutsätter att en person inte dubbellagras i olika listor
+	int numberOfPersons() 
 	{
 		// EXTRA: Andra numberOfPersons
 		// sa att den raknar unika persons genom t.ex. ID sa att det inte spelar nagon roll om en person ar lagrad i flera listor. 
