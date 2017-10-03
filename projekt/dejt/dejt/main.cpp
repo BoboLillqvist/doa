@@ -11,10 +11,15 @@
 //
 
 #include <iostream>
+#include "Menu.h"
+
 using namespace std;
 
 int main(void)
 {
+    Menu menu;
+    menu.menySnurra();
+
     system("pause");
     return 0;
 }
