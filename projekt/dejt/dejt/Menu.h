@@ -39,7 +39,10 @@ public:
 			case 5:
 				match();
 				break;
-			case 6: 
+			case 6:
+				printList();
+				break;
+			case 7: 
 				quitCheck = true;
 				break;
 			default:
@@ -66,7 +69,8 @@ public:
 		std::cout << "3. Save to file" << std::endl;
 		std::cout << "4. Read from file" << std::endl;
 		std::cout << "5. Match couples" << std::endl;
-		std::cout << "6. Quit" << std::endl;
+		std::cout << "6. Print list" << std::endl;
+		std::cout << "7. Quit" << std::endl;
 	}
 
 	void newGirl()
@@ -101,7 +105,7 @@ public:
         // Get preferences from user
 		std::cout << "Vad är personens preferenser?"
                   << "(skriv vilka sorter genus hos partnern personen är intresserad av, en eller flera.)"
-                  << std::endl << "Tryck enter två gånger i rad för att avsluta" << std::endl; getchar();
+            << std::endl << "Tryck enter två gånger i rad för att avsluta" << std::endl; getchar();
 
 		while (std::getline(std::cin, pref))
 		{
@@ -124,7 +128,7 @@ public:
 
         // Get interests from user
 		std::cout << "Vad är personens intressen?" << std::endl
-                  << "Tryck enter två gånger i rad för att avlusta" << std::endl; getchar();
+                  << "Tryck enter två gånger i rad för att avlusta" << std::endl;
 
 		while (std::getline(std::cin, interest))
 		{
@@ -202,17 +206,73 @@ public:
 
 	void saveToFile()
 	{
+        if (!date.getBoysList().getList().empty())
+            date.getBoysList().listToFile("male.csv");
+
+        if (!date.getGirlsList().getList().empty())
+            date.getGirlsList().listToFile("female.csv");
+
 		std::cout << std::endl<< "File saved!" << std::endl;
 		system("pause");
-		//Kalla på personlist och eventuellt couplelist save metoder
 	}
 
 	void readFromFile()
 	{
+        try
+        {
+            date.getBoysList().fileToList("male.csv");
+        }
+        catch (const std::exception& e)
+        {
+            e.what();
+        }
+
+        try
+        {
+            date.getGirlsList().fileToList("female.csv");
+        }
+        catch (const std::exception& e)
+        {
+            e.what();
+        }
+
 		std::cout << std::endl<< "File read!" << std::endl;
 		system("pause");
 		//Kalla på personlist och eventuellt couplelist read metoder
 	}
+
+    void printList()
+    {
+        // TODO: Gör massa metoder
+
+        std::cout << std::endl;
+        std::cout << "------ Boys --------" << std::endl;
+        for (auto boy : date.getBoysList().getList())
+        {
+            std::cout << "[" << boy.getID() << "]" << " " << boy.getName() << ", "
+                      << "prefers: " << boy.preferencesToString() << ", "
+                      << "interests: " << boy.interestsToString() << std::endl;
+        }
+
+        std::cout << std::endl;
+        std::cout << "------- Girls --------" << std::endl;
+
+        for (auto girl : date.getGirlsList().getList())
+        {
+            std::cout << "[" << girl.getID() << "]" << " " << girl.getName() << ", "
+                      << "prefers: " << girl.preferencesToString() << ", "
+                      << "interests: " << girl.interestsToString() << std::endl;
+        }
+
+        std::cout << std::endl;
+        std::cout << "------- Couples --------" << std::endl;
+        for (auto couple : date.getCouplesList().getList())
+        {
+            std::cout << couple.getPersonA().getName() << " <--> " << couple.getPersonB().getName() << std::endl;
+        }
+
+        system("pause");
+    }
 
 	void match()
 	{
