@@ -112,6 +112,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="TestCouple.cpp" />
+    <ClCompile Include="TestCoupleList.cpp" />
+    <ClCompile Include="TestDate.cpp" />
+    <ClCompile Include="TestInterestTable.cpp" />
+    <ClCompile Include="TestMenu.cpp" />
+    <ClCompile Include="TestPerson.cpp" />
+    <ClCompile Include="TestPersonList.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="catch.hpp" />
