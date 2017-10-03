@@ -218,6 +218,7 @@ public:
 
 	void readFromFile()
 	{
+        // FIX: Inte två try-catch block?
         try
         {
             date.getBoysList().fileToList("male.csv");
