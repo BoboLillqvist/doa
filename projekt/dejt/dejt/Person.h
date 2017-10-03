@@ -1,5 +1,6 @@
 #pragma once
 #include "InterestTable.h"
+#include <sstream>
 #include <vector>
 
 typedef std::forward_list<std::string>::iterator interestsIterator;
@@ -75,13 +76,13 @@ public:
         return counter;
     }
 
-    std::string preferencesToString(std::vector<std::string> list) const
+    std::string preferencesToString() const
     {
         std::stringstream ss;
-        for (auto item : list)
+        for (auto item : preferences_)
         {
             ss << item;
-            ss << ((item == list.back()) ? "" : ",");
+            ss << ((item == preferences_.back()) ? "" : ",");
         }
         
         return ss.str();
@@ -167,10 +168,10 @@ std::ostream& operator<<(std::ostream& os, Person& person)
 
     // Append person data to stream
     os << person.id_ << ";"
-       << nameToStore << ";"
        << person.age_ << ";"
+       << nameToStore << ";"
        << person.gender_ << ";"
-       << person.preferencesToString(person.preferences_) << ";"
+       << person.preferencesToString() << ";"
        << person.interestsToString()
        << "\n";
 
