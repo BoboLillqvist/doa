@@ -28,10 +28,10 @@ public:
     void fileToList(std::string filename)
     {
         std::string line;
-        std::ifstream listFile;
+        std::ifstream listFile(filename);
 
         // Open the file for out operations
-        listFile.open(filename, std::ios::out);
+        //listFile.open(filename);
 
         if (!listFile)
             throw std::exception("Could not open file");
@@ -43,7 +43,8 @@ public:
             std::istringstream iss(line);
 
             iss >> person;
-            list.push_front(person);
+
+            add(person);
         }
 
         listFile.close();
