@@ -20,6 +20,11 @@ public:
         return list;
     }
 
+    void add(Person person)
+    {
+        list.push_front(person);
+    }
+
     void fileToList(std::string filename)
     {
         std::string line;
