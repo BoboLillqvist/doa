@@ -28,8 +28,8 @@ TEST_CASE("Test Person Class")
     {
         std::string bobsPreferences = "male,female";
         std::string majasPreferences = "male";
-        REQUIRE(bob.preferencesToString(bob.getPreferences()) == bobsPreferences);
-        REQUIRE(maja.preferencesToString(maja.getPreferences()) == majasPreferences);
+        REQUIRE(bob.preferencesToString() == bobsPreferences);
+        REQUIRE(maja.preferencesToString() == majasPreferences);
     }
 
     SECTION("Test interestsToString()")
