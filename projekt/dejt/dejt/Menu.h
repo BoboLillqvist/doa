@@ -55,7 +55,8 @@ public:
 			//Case 3: Save to file
 			//Case 4: Read from file
 			//Case 5: Match
-			// Case 6: Quit
+			//Case 6: Print list
+			//Case 7: Quit
 		}
 	}
 
@@ -86,7 +87,7 @@ public:
 		newPerson('m');
 		system("pause");
 		// New person
-		// Add person to date.girllist
+		// Add person to date.boylist
 	}
 
 	void newPerson (char gender)
