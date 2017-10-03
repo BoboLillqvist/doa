@@ -80,8 +80,23 @@ public:
 
 	void createCouple(Person& personA, Person& personB)
 	{
-		Couple couple1(personA, personB);
-		couples.add(couple1);
+        bool alreadyInCouple = false;
+        for (auto &itc : getCouplesList().getList())
+        {
+            if (
+                (personA.getID() == itc.getPersonA().getID()) || (personB.getID() == itc.getPersonB().getID()) ||
+                (personA.getID() == itc.getPersonB().getID()) || (personB.getID() == itc.getPersonA().getID())
+                )
+            {
+                alreadyInCouple = true;
+            }
+        }
+        if (!alreadyInCouple)
+        {
+            Couple couple1(personA, personB);
+            couples.add(couple1);
+        }
+
 	}
 
 	void removePersonFromList(Person& personA)
