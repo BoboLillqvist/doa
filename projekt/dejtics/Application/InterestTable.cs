@@ -26,5 +26,10 @@ namespace Application
                 List.AddFirst(interest);
         }
 
+        public int NumberOfInterests()
+        {
+            return List.Count;
+        }
+
     }
 }
