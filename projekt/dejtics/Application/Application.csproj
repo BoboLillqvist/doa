@@ -42,6 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Couple.cs" />
+    <Compile Include="CoupleList.cs" />
+    <Compile Include="Date.cs" />
+    <Compile Include="InterestTable.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="PersonList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
