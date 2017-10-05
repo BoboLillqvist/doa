@@ -18,22 +18,22 @@ namespace Application
         }
 
 
-        void Add(Person person)
+        public void Add(Person person)
         {
             List.AddFirst(person);
         }
 
-        void FileToList()
+        public void FileToList(string filename)
         {
 
         }
 
-        void ListToFile()
+        public void ListToFile(string filename)
         {
 
         }
 
-        int NumPersons()
+        public int NumPersons()
         {
             return List.Count;
         }
