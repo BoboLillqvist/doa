@@ -13,5 +13,18 @@ namespace Application
         public char Gender { get; private set; }
 
         public InterestTable InterestsTable { get; private set; } = new InterestTable();
+
+        // Constructors
+        public Person() {}
+
+        public Person(int id, int age, string name, char gender, List<string> interests)
+        {
+            ID = id;
+            Age = age;
+            Name = name;
+            Gender = gender;
+            AddToInterestTable(interests);
+        }
+
     }
 }
