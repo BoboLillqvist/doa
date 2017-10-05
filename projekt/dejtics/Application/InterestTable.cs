@@ -17,5 +17,14 @@ namespace Application
             return List;
         }
 
+        // Methods
+        public void Add(string interest)
+        {
+            interest = interest.ToLower();
+
+            if (!List.Contains(interest) && interest != "")
+                List.AddFirst(interest);
+        }
+
     }
 }
