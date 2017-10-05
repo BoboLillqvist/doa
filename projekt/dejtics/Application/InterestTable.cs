@@ -11,5 +11,11 @@ namespace Application
         // Constructor
         public InterestTable() { }
 
+        // Getters
+        public LinkedList<string> GetList()
+        {
+            return List;
+        }
+
     }
 }
