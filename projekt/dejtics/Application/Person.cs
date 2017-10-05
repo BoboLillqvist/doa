@@ -33,5 +33,18 @@ namespace Application
                 InterestsTable.Add(interest);
         }
 
+        public string InterestsToString()
+        {
+            StringBuilder str = new StringBuilder();
+
+            foreach (var interest in InterestsTable.GetList())
+            {
+                str.Append(interest);
+                if (interest != InterestsTable.GetList().Last.Value)
+                    str.Append(",");
+            }
+
+            return str.ToString();
+        }
     }
 }
