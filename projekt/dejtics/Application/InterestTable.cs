@@ -31,5 +31,18 @@ namespace Application
             return List.Count;
         }
 
+        public int NumberOfCommonInterests(InterestTable otherList)
+        {
+            int commonCounter = 0;
+
+            // Loop this persons interests
+            foreach (var thisInterest in List)
+                // Check if current interest is in the other persons interest table
+                foreach (var otherInterest in otherList.List)
+                    if (thisInterest == otherInterest)
+                        commonCounter++;
+
+            return commonCounter;
+        }
     }
 }
