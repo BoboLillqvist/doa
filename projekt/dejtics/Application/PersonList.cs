@@ -17,5 +17,15 @@ namespace Application
             List.AddFirst(person);
         }
 
+        void FileToList()
+        {
+
+        }
+
+        void ListToFile()
+        {
+
+        }
+
     }
 }
