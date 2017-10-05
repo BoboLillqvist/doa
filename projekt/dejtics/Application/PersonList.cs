@@ -12,6 +12,12 @@ namespace Application
 
         }
 
+        public LinkedList<Person> GetList()
+        {
+            return List;
+        }
+
+
         void Add(Person person)
         {
             List.AddFirst(person);
