@@ -27,5 +27,9 @@ namespace Application
 
         }
 
+        int NumPersons()
+        {
+            return List.Count;
+        }
     }
 }
