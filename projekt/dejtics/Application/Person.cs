@@ -26,5 +26,12 @@ namespace Application
             AddToInterestTable(interests);
         }
 
+        // Methods
+        public void AddToInterestTable(List<string> interests)
+        {
+            foreach (var interest in interests)
+                InterestsTable.Add(interest);
+        }
+
     }
 }
