@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Application
 {
@@ -6,6 +7,9 @@ namespace Application
     {
         // Datamembers
         private LinkedList<string> List = new LinkedList<string>();
+
+        // Constructor
+        public InterestTable() { }
 
     }
 }
