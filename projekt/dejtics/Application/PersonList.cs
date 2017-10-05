@@ -12,5 +12,10 @@ namespace Application
 
         }
 
+        void Add(Person person)
+        {
+            List.AddFirst(person);
+        }
+
     }
 }
