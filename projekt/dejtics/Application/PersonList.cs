@@ -1,11 +1,13 @@
 ﻿using System;
+using System.IO;
+using System.Text;
 using System.Collections.Generic;
 
 namespace Application
 {
-    class PersonList
+    public class PersonList
     {
-        public LinkedList<Person> List { get; private set; }
+        public LinkedList<Person> List { get; private set; } = new LinkedList<Person>();
 
         public PersonList()
         {
@@ -18,12 +20,12 @@ namespace Application
         }
 
 
-        void Add(Person person)
+        public void Add(Person person)
         {
             List.AddFirst(person);
         }
 
-        void FileToList()
+        public bool ListToFile(bool isMaleFile)
         {
 
         }
@@ -33,7 +35,7 @@ namespace Application
 
         }
 
-        int NumPersons()
+        public int NumPersons()
         {
             return List.Count;
         }
