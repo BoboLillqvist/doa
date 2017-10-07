@@ -29,5 +29,30 @@ namespace Application
             return filePath;
         }
 
+        public bool Write(PersonList personList, bool isMaleFile)
+        {
+            string filePath = GetFullFilepath(isMaleFile);
+
+            StringBuilder output = new StringBuilder();
+
+            // Append each person to the line
+            foreach (var person in personList.GetList())
+                output.Append(person.ToString());
+
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(filePath, false))
+                {
+                    writer.Write(output);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error:" + ex.Message);
+                return false;
+            }
+        }
+
     }
 }
