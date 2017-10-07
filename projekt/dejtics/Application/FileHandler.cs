@@ -54,5 +54,43 @@ namespace Application
             }
         }
 
+        public PersonList Read(bool isMaleFile)
+        {
+            PersonList personList = new PersonList();
+            List<string> interestList = new List<string>();
+
+            string[] semicolonValues, userInfo, interests;
+            string line, userInfoStr, interestsStr;
+
+            using (StreamReader reader = new StreamReader(GetFullFilepath(isMaleFile)))
+            {
+                while ((line = reader.ReadLine()) != null)
+                {
+                    // Parse csv data
+                    semicolonValues = SplitOnSemicolon(line);
+
+                    // Separata user info from interests
+                    userInfoStr = semicolonValues[0];
+                    interestsStr = semicolonValues[1];
+
+                    // Parse and store user info
+                    userInfo = SplitOnComma(userInfoStr);
+                    int id = Int32.Parse(userInfo[0]);
+                    int age = Int32.Parse(userInfo[1]);
+                    string name = userInfo[2];
+                    char gender = Char.Parse(userInfo[3]);
+
+                    // Parse and store interestrs from string
+                    interests = SplitOnComma(interestsStr);
+                    foreach (string interest in interests)
+                        interestList.Add(interest);
+
+                    // Store person
+                    Person person = new Person(id, age, name, gender, interestList);
+                    personList.Add(person);
+                }
+            }
+            return personList;
+        }
     }
 }
