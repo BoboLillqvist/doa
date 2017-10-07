@@ -7,10 +7,13 @@ namespace Application
     class Menu
     {
         public Date Dates { get; private set; } = new Date();
+
         public Menu() { }
+
         public void MenySnurra()
         {
             bool quitCheck = false;
+
             while (!quitCheck)
             {
                 int switchCase = 0;
@@ -18,34 +21,22 @@ namespace Application
 
                 switch (switchCase)
                 {
-                    case 1:
-                        NewGirl();
-                        break;
-                    case 2:
-                        NewBoy();
-                        break;
-                    case 3:
-                        SaveToFile();
-                        break;
-                    case 4:
-                        ReadFromFile();
-                        break;
-                    case 5:
-                        Match();
-                        break;
-                    case 6:
-                        PrintList();
-                        break;
-                    case 7:
-                        quitCheck = true;
-                        break;
-                    default:
-                        break;
+                    case 1: NewGirl(); break;
+                    case 2: NewBoy(); break;
+                    case 3: SaveToFile(); break;
+                    case 4: ReadFromFile(); break;
+                    case 5: Match(); break;
+                    case 6: PrintList(); break;
+                    case 7: quitCheck = true; break;
+                    default: break;
                 }
             }
         }
 
-        public void Display() { }
+        public void Display()
+        {
+
+        }
 
         void NewGirl()
         {
@@ -181,10 +172,17 @@ namespace Application
 
         void SaveToFile()
         {
-            if (Dates.Boys.List.Count!=0)
-                Dates.Boys.ListToFile("male.csv");
+            if (Dates.Boys.List.Count != 0)
+            {
+                bool isMale = true;
+                Dates.Boys.ListToFile(isMale);
+            }
+
             if (Dates.Girls.List.Count != 0)
-                Dates.Girls.ListToFile("female.csv");
+            {
+                bool isMale = false;
+                Dates.Girls.ListToFile(isMale);
+            }
         }
 
         void ReadFromFile()

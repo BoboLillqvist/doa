@@ -7,7 +7,9 @@ namespace Application
         public PersonList Boys { get; private set; }
         public PersonList Girls { get; private set; }
         public CoupleList Couples { get; private set; }
+
         public Date() { }
+
         public void Match()
         {
             int threshhold = 1;
@@ -56,6 +58,7 @@ namespace Application
             }
             */
         }
+
         public void Compatibility(int threshhold, Person personA, Person personB, int bestMatch, int temp, Person favorite)
         {
             if ((CompareAge(personA, personB) /*&& ComparePreferences(personA, personB)*/))
@@ -68,55 +71,45 @@ namespace Application
                 }
             }
         }
+
         public void CreateCouple(Person personA, Person personB)
         {
             bool alreadyInCouple = false;
+
             foreach (var itc in Couples.List)
             {
-                if (
-                    (personA.ID == itc.PersonA.ID) || (personB.ID == itc.PersonB.ID) ||
-                    (personA.ID == itc.PersonB.ID) || (personB.ID == itc.PersonA.ID)
-                    )
+                if ((personA.ID == itc.PersonA.ID) || (personB.ID == itc.PersonB.ID) ||
+                    (personA.ID == itc.PersonB.ID) || (personB.ID == itc.PersonA.ID))
                 {
                     alreadyInCouple = true;
                 }
             }
+
             if (!alreadyInCouple)
             {
                 Couple couple1 = new Couple(personA, personB);
                 Couples.Add(couple1);
             }
         }
+
         public bool CompareAge(Person personA, Person personB)
         {
             if (personB.Age > personA.Age)
-            {
                 if ((((personB.Age) / 2) + 7) > personA.Age)
-                {
                     return false;
-                }
-            }
+
             if (personB.Age < personA.Age)
-            {
                 if ((((personB.Age) * 2) - 7) < personA.Age)
-                {
                     return false;
-                }
-            }
+
             if (personA.Age > personB.Age)
-            {
                 if ((((personA.Age) / 2) + 7) > personB.Age)
-                {
                     return false;
-                }
-            }
+
             if (personA.Age < personB.Age)
-            {
                 if ((((personA.Age) * 2) - 7) < personB.Age)
-                {
                     return false;
-                }
-            }
+
             return true;
         }
 
@@ -151,14 +144,15 @@ namespace Application
         {
             return (personA.InterestsTable.NumberOfCommonInterests(personB.InterestsTable));
         }
+
         public int NumberOfCouples()
         {
             return Couples.List.Count;
         }
+
         public int NumberOfPersons()
         {
-            int Amount = 0;
-            return (Amount = Boys.List.Count + Girls.List.Count);
+            return (Boys.List.Count + Girls.List.Count);
         }
     }
 }

@@ -19,7 +19,6 @@ namespace Application
             return List;
         }
 
-
         public void Add(Person person)
         {
             List.AddFirst(person);
