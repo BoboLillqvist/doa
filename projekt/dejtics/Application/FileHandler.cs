@@ -19,5 +19,15 @@ namespace Application
             return values;
         }
 
+        string GetFullFilepath(bool isMaleFile)
+        {
+            string filename = isMaleFile ? "male.csv" : "female.csv";
+
+            // Get full file path
+            string startupPath = Environment.CurrentDirectory;
+            string filePath = startupPath + "\\" + filename;
+            return filePath;
+        }
+
     }
 }
