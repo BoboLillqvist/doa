@@ -41,5 +41,42 @@ namespace Application.Tests
             Assert.IsTrue(personList.ListToFile(isMaleFile));
         }
 
+        [TestMethod()]
+        public void ReadTest()
+        {
+            PersonList persons = new PersonList();
+            FileHandler file = new FileHandler();
+
+            bool isMaleFile = true;
+            persons = file.Read(isMaleFile);
+
+            // Test if right number of persons was read
+            int expectedNumPersons = 2;
+            Assert.AreEqual(expectedNumPersons, persons.NumPersons());
+
+            // Get persons
+            Person bob = persons.List.ElementAt(0);
+            Person kenneth = persons.List.ElementAt(1);
+
+            // Test Bob
+            Assert.AreEqual(0, bob.ID);
+            Assert.AreEqual(22, bob.Age);
+            Assert.AreEqual("bob", bob.Name);
+            Assert.AreEqual('m', bob.Gender);
+            Assert.IsTrue(bob.InterestsTable.GetList().ElementAt(0).Equals("sport"));
+            Assert.IsTrue(bob.InterestsTable.GetList().ElementAt(1).Equals("mat"));
+            Assert.IsTrue(bob.InterestsTable.GetList().ElementAt(2).Equals("fika"));
+            Assert.IsTrue(bob.InterestsTable.GetList().ElementAt(3).Equals("supa"));
+
+            // Test Kenneth
+            Assert.AreEqual(1, kenneth.ID);
+            Assert.AreEqual(43, kenneth.Age);
+            Assert.AreEqual("kenneth", kenneth.Name);
+            Assert.AreEqual('m', kenneth.Gender);
+            Assert.IsTrue(kenneth.InterestsTable.GetList().ElementAt(0).Equals("handboll"));
+            Assert.IsTrue(kenneth.InterestsTable.GetList().ElementAt(1).Equals("vvs-tekniker"));
+            Assert.IsTrue(kenneth.InterestsTable.GetList().ElementAt(2).Equals("iron maiden"));
+            Assert.IsTrue(kenneth.InterestsTable.GetList().ElementAt(3).Equals("katter"));
+       }
     }
 }
