@@ -46,5 +46,18 @@ namespace Application
 
             return str.ToString();
         }
+
+        override public string ToString()
+        {
+            StringBuilder str = new StringBuilder();
+            str.Append(ID + ",");
+            str.Append(Age + ",");
+            str.Append(Name.ToLower() + ",");
+            str.Append(Gender + ";");
+            str.Append(InterestsToString() + ";");
+            str.Append("\n");
+
+            return str.ToString();
+        }
     }
 }
