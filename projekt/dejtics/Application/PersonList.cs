@@ -27,12 +27,8 @@ namespace Application
 
         public bool ListToFile(bool isMaleFile)
         {
-
-        }
-
-        void ListToFile()
-        {
-
+            FileHandler file = new FileHandler();
+            return file.Write(this, isMaleFile);
         }
 
         public int NumPersons()
