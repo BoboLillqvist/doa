@@ -7,5 +7,11 @@ namespace Application
 {
     public class FileHandler
     {
+        private string[] SplitOnSemicolon(string str)
+        {
+            string[] values = str.Split(';');
+            return values;
+        }
+
     }
 }
