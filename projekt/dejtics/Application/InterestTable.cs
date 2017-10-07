@@ -82,7 +82,7 @@ namespace Application
 
         public static bool operator != (InterestTable rhs, InterestTable lhs)
         {
-            return rhs == lhs;
+            return rhs != lhs;
         }
     }
 }
