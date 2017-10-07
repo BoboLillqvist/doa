@@ -13,5 +13,11 @@ namespace Application
             return values;
         }
 
+        private string[] SplitOnComma(string str)
+        {
+            string[] values = str.Split(',');
+            return values;
+        }
+
     }
 }
