@@ -45,6 +45,7 @@
     <Compile Include="Couple.cs" />
     <Compile Include="CoupleList.cs" />
     <Compile Include="Date.cs" />
+    <Compile Include="FileHandler.cs" />
     <Compile Include="InterestTable.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Person.cs" />
