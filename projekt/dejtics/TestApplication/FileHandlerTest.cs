@@ -12,5 +12,12 @@ namespace Application.Tests
     [TestClass()]
     public class FileHandlerTest
     {
+        [TestMethod()]
+        public void WriteTest()
+        {
+            bool isMaleFile = true;
+            Assert.IsTrue(personList.ListToFile(isMaleFile));
+        }
+
     }
 }
