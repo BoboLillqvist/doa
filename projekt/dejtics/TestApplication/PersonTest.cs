@@ -34,5 +34,16 @@ namespace Application.Tests
             Assert.AreEqual(expectedStr, mange.InterestsToString());
         }
 
+        [TestMethod()]
+        public void ToStringTest()
+        {
+            List<string> interests1 = new List<string> {
+                "Sport", "Mat", "Fika", "Supa"
+            };
+            Person bob = new Person(0, 22, "Bob", 'm', interests1);
+
+            string expectedBobToString = "0,22,bob,m;supa,fika,mat,sport;\n";
+            Assert.AreEqual(expectedBobToString, bob.ToString());
+        }
     }
 }
