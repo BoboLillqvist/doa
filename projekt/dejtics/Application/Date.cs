@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 namespace Application
 {
-    class Date
+    public class Date
     {
         public PersonList Boys { get; private set; } = new PersonList();
         public PersonList Girls { get; private set; } = new PersonList();
