@@ -16,51 +16,37 @@ namespace Application
             int threshhold = 1;
             foreach (var it1 in Boys.List)
             {
-                Person favorite = null;
+                Person favorite = new Person();
                 int bestMatch = 0, temp = 0;
                 /*
                 foreach (var it2 in Boys.List)
-                {
                     if (it1.ID != it2.ID)
-                    {
                         Compatibility(threshhold, it1, it2, bestMatch, temp, favorite);
-                    }
-                }
                 */
                 foreach (var it3 in Girls.List)
-                {
                     if (it1.ID != it3.ID)
-                    {
-                        Compatibility(threshhold, it1, it3, bestMatch, temp, favorite);
-                    }
-                }
+                        Compatibility(threshhold, it1, it3, bestMatch, temp, ref favorite);
+
                 if (favorite != null)
-                {
                     CreateCouple(it1, favorite);
-                }
             }
             /*
             foreach (var it4 in Girls.List)
             {
                 Person favorite2 = null;
                 int bestMatch2 = 0, temp2 = 0;
+
                 foreach (var it5 in Girls.List)
-                {
                     if (it4.ID != it5.ID)
-                    {
                         Compatibility(threshhold, it4, it5, bestMatch2, temp2, favorite2);
-                    }
-                }
 
                 if (favorite2 != null)
-                {
                     CreateCouple(it4, favorite2);
-                }
             }
             */
         }
 
-        public void Compatibility(int threshhold, Person personA, Person personB, int bestMatch, int temp, Person favorite)
+        public void Compatibility(int threshhold, Person personA, Person personB, int bestMatch, int temp, ref Person favorite)
         {
             if ((CompareAge(personA, personB) /*&& ComparePreferences(personA, personB)*/))
             {
