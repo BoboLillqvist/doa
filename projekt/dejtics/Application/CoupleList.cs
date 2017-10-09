@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Application
 {
-    class CoupleList
+    public class CoupleList
     {
         public LinkedList<Couple> List { get; private set; } = new LinkedList<Couple>();
 
