@@ -23,6 +23,13 @@ namespace dejtics
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void loadBtn_Click(object sender, EventArgs e)
         {
             PersonList boys = new PersonList();
