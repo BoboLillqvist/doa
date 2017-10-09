@@ -23,6 +23,28 @@ namespace dejtics
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        private void loadBtn_Click(object sender, EventArgs e)
+        {
+            PersonList boys = new PersonList();
+            PersonList girls = new PersonList();
+
+            boys = DateObj.File.Read(true);
+            girls = DateObj.File.Read(false);
+
+            foreach (var boy in boys.GetList())
+            {
+                DateObj.Boys.Add(boy);
+                personListBox.Items.Add(boy.Name + ", " + boy.InterestsToString());
+            }
+
+            foreach (var girl in girls.GetList())
+            {
+                DateObj.Girls.Add(girl);
+                personListBox.Items.Add(girl.Name);
+            }
+
+        }
+
         private void matchBtn_Click(object sender, EventArgs e)
         {
             DateObj.Match();
