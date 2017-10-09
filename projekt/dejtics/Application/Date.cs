@@ -4,9 +4,10 @@ namespace Application
 {
     class Date
     {
-        public PersonList Boys { get; private set; }
-        public PersonList Girls { get; private set; }
-        public CoupleList Couples { get; private set; }
+        public PersonList Boys { get; private set; } = new PersonList();
+        public PersonList Girls { get; private set; } = new PersonList();
+        public CoupleList Couples { get; private set; } = new CoupleList();
+        public FileHandler File { get; private set; } = new FileHandler();
 
         public Date() { }
 
