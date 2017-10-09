@@ -187,24 +187,6 @@ namespace Application
 
         void ReadFromFile()
         {
-            // FIX: Inte två try-catch block?
-            try
-            {
-                Dates.Boys.FileToList("male.csv");
-            }
-            catch (Exception e)
-            {
-                //e.what();
-            }
-
-            try
-            {
-                Dates.Girls.FileToList("female.csv");
-            }
-            catch (Exception e)
-            {
-                //e.what();
-            }
 
         }
 
