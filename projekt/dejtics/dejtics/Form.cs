@@ -19,5 +19,18 @@ namespace dejtics
         {
             InitializeComponent();
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        private void matchBtn_Click(object sender, EventArgs e)
+        {
+            DateObj.Match();
+
+            foreach (var couple in DateObj.Couples.List)
+            {
+                couplesListBox.Items.Add(couple.PersonA.Name + " <--> " + couple.PersonB.Name);
+            }
+        }
     }
 }
