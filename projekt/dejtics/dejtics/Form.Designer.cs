@@ -46,6 +46,7 @@
             this.addNewPersonBtn.TabIndex = 0;
             this.addNewPersonBtn.Text = "+ Add new person";
             this.addNewPersonBtn.UseVisualStyleBackColor = true;
+            this.addNewPersonBtn.Click += new System.EventHandler(this.addNewPersonBtn_Click);
             // 
             // matchBtn
             // 
