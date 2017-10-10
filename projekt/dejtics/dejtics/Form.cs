@@ -32,22 +32,28 @@ namespace dejtics
 
         private void loadBtn_Click(object sender, EventArgs e)
         {
+            // Clear the box
+            personListBox.Items.Clear();
+
+            // Create new person lists
             PersonList boys = new PersonList();
             PersonList girls = new PersonList();
 
+            // Read from file
             boys = DateObj.File.Read(true);
             girls = DateObj.File.Read(false);
 
+            // List persons
             foreach (var boy in boys.GetList())
             {
                 DateObj.Boys.Add(boy);
-                personListBox.Items.Add(boy.Name + ", " + boy.InterestsToString());
+                personListBox.Items.Add(boy.Name + " [" + boy.InterestsToString() + "]");
             }
 
             foreach (var girl in girls.GetList())
             {
                 DateObj.Girls.Add(girl);
-                personListBox.Items.Add(girl.Name);
+                personListBox.Items.Add(girl.Name + " [" + girl.InterestsToString() + "]");
             }
 
         }
