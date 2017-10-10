@@ -52,10 +52,16 @@ namespace dejtics
 
             // Add person to list
             if (gender == 'm')
+            {
                 varDejt.DateObj.Boys.Add(newPerson);
+                varDejt.getPersonListBox().Items.Add(newPerson);
+            }
+                
             else
+            {
                 varDejt.DateObj.Girls.Add(newPerson);
-
+                varDejt.getPersonListBox().Items.Add(newPerson);
+            }
             Close();
         }
 
