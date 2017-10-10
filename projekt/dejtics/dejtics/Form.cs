@@ -61,5 +61,11 @@ namespace dejtics
                 couplesListBox.Items.Add(couple.PersonA.Name + " <--> " + couple.PersonB.Name);
             }
         }
+
+        private void addNewPersonBtn_Click(object sender, EventArgs e)
+        {
+            FormAddPerson formAddPerson = new FormAddPerson(this);
+            formAddPerson.Show();
+        }
     }
 }
