@@ -19,6 +19,12 @@ namespace Application
             return values;
         }
 
+        public static string[] SplitOnNewLine(string str)
+        {
+            string[] values = str.Split('\n');
+            return values;
+        }
+
         string GetFullFilepath(bool isMaleFile)
         {
             string filename = isMaleFile ? "male.csv" : "female.csv";
