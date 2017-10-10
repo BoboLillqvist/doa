@@ -44,9 +44,16 @@ namespace dejtics
                 listOfInterests.Add(interest);
             Person newPerson = new Person(ID,Age,Name,Gender,listOfInterests);
             if (Gender == 'm')
+            {
                 varDejt.DateObj.Boys.Add(newPerson);
+                varDejt.getPersonListBox().Items.Add(newPerson);
+            }
+                
             else
+            {
                 varDejt.DateObj.Girls.Add(newPerson);
+                varDejt.getPersonListBox().Items.Add(newPerson);
+            }
             Close();
         }
 

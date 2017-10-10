@@ -74,5 +74,9 @@ namespace dejtics
             FormAddPerson formAddPerson = new FormAddPerson(this);
             formAddPerson.Show();
         }
+        public System.Windows.Forms.ListBox getPersonListBox()
+        {
+            return personListBox;
+    }
     }
 }
