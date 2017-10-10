@@ -61,5 +61,12 @@ namespace dejtics
                 couplesListBox.Items.Add(couple.PersonA.Name + " <--> " + couple.PersonB.Name);
             }
         }
+
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+            // Save boys file
+            if (DateObj.Boys.ListToFile(true) && DateObj.Girls.ListToFile(false))
+                MessageBox.Show("File saved!");
+        }
     }
 }
