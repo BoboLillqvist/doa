@@ -94,6 +94,8 @@ namespace Application
                     // Store person
                     Person person = new Person(id, age, name, gender, interestList);
                     personList.Add(person);
+
+                    interestList.Clear();
                 }
             }
             return personList;

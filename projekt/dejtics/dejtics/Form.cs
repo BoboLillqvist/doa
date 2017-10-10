@@ -62,6 +62,13 @@ namespace dejtics
             }
         }
 
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+            // Save boys file
+            if (DateObj.Boys.ListToFile(true) && DateObj.Girls.ListToFile(false))
+                MessageBox.Show("File saved!");
+        }
+
         private void addNewPersonBtn_Click(object sender, EventArgs e)
         {
             FormAddPerson formAddPerson = new FormAddPerson(this);
