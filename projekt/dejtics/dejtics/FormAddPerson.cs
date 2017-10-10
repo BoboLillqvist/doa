@@ -54,13 +54,13 @@ namespace dejtics
             if (gender == 'm')
             {
                 varDejt.DateObj.Boys.Add(newPerson);
-                varDejt.getPersonListBox().Items.Add(newPerson);
+                varDejt.getPersonListBox().Items.Add((newPerson.Name + " [" + newPerson.InterestsToString() + "]"));
             }
                 
             else
             {
                 varDejt.DateObj.Girls.Add(newPerson);
-                varDejt.getPersonListBox().Items.Add(newPerson);
+                varDejt.getPersonListBox().Items.Add(newPerson.Name + " [" + newPerson.InterestsToString() + "]");
             }
             Close();
         }

@@ -60,6 +60,7 @@ namespace dejtics
 
         private void matchBtn_Click(object sender, EventArgs e)
         {
+            couplesListBox.Items.Clear();
             DateObj.Match();
 
             foreach (var couple in DateObj.Couples.List)

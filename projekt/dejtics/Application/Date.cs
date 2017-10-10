@@ -18,6 +18,7 @@ namespace Application
             foreach (var it1 in Boys.List)
             {
                 Person favorite = new Person();
+                favorite = null;
                 int bestMatch = 0, temp = 0;
                 /*
                 foreach (var it2 in Boys.List)
